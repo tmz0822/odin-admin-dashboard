@@ -1,0 +1,115 @@
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* font */
+
+/* Styling */
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'sidebar header'
+    'sidebar main';
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 150px 1fr;
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid;
+  height: 100vh;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background: #1992d4;
+
+  display: grid;
+  grid-template-rows: 1fr 4fr 5fr;
+  color: white;
+}
+
+#sidebar > * {
+  border: 1px solid red;
+}
+
+.brand span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#sidebar .navigation {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 50px);
+  align-items: center;
+
+  padding: 0 20px;
+  border: 1px solid red;
+}
+
+.navigation a {
+  display: flex;
+
+  column-gap: 15px;
+  padding: 10px 0;
+}
+
+.navigation a,
+.branding a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation a::before {
+  content: '';
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+}
+
+.navigation .home::before {
+  background: url(images/home.svg);
+}
+
+.navigation .profile::before {
+  background: url(images/profile-card.svg);
+}
+
+.navigation .messages::before {
+  background: url(images/messages.svg);
+}
+
+.navigation .history::before {
+  background: url(images/history.svg);
+}
+
+.navigation .tasks::before {
+  background: url(images/tasks.svg);
+}
+.navigation .communities::before {
+  background: url(images/communities.svg);
+}
+
+/* #sidebar > * {
+  border: 1px solid black;
+} */
+
+#header {
+  grid-area: header;
+}
+
+#main {
+  grid-area: main;
+  background: #e2e8f0;
+}
