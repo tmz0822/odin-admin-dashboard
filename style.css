@@ -22,10 +22,8 @@ html {
   grid-template-areas:
     'sidebar header'
     'sidebar main';
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: 180px 1fr;
-  padding: 0;
-  margin: 0;
 
   border: 1px solid;
   height: 100vh;
@@ -39,6 +37,7 @@ html {
   grid-template-rows: 50px 300px 1fr;
   row-gap: 30px;
   color: white;
+  padding-top: 20px;
 }
 
 .brand {
@@ -130,12 +129,13 @@ html {
   grid-area: header;
   padding: 0 80px 0 50px;
   display: grid;
-  align-items: center;
-}
+  grid-template-rows: 1fr 1fr;
 
-/* #header > * {
-  border: 1px solid;
-} */
+  align-items: center;
+
+  position: relative;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
 
 .header-top {
   display: grid;
@@ -143,6 +143,10 @@ html {
 
   align-items: center;
 }
+
+/* .header-top > * {
+  border: 1px solid;
+} */
 
 .header-top .user-info {
   display: grid;
@@ -233,4 +237,63 @@ html {
 #main {
   grid-area: main;
   background: #e2e8f0;
+  padding: 25px 20px 100px 15px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  column-gap: 20px;
+}
+
+main h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  height: 100%;
+}
+
+.project-cards .card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 6px;
+  border-left: 7px solid #f0b429;
+
+  display: grid;
+  box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.project-cards .buttons {
+  place-self: end;
+
+  display: flex;
+  gap: 10px;
+}
+
+.project-cards .card button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.project-cards .card button img {
+  width: 22px;
+}
+
+.project-cards .card h3 {
+  font-size: 0.95rem;
+}
+
+.project-cards .card p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.main-right {
+  display: grid;
 }
