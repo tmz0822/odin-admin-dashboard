@@ -23,7 +23,7 @@ html {
     'sidebar header'
     'sidebar main';
   grid-template-columns: 250px 1fr;
-  grid-template-rows: 180px 1fr;
+  grid-template-rows: 150px 1fr;
 
   height: 100vh;
 }
@@ -48,7 +48,6 @@ html {
 
 .brand img {
   width: 40px;
-  height: 100%;
 }
 
 .brand span {
@@ -156,7 +155,6 @@ html {
 
 .header-top .user-info .notification img {
   width: 30px;
-  height: 100%;
 }
 
 .header-top .search-bar input {
@@ -185,7 +183,6 @@ html {
 
 .header-top .user-info .profile-picture img {
   width: 40px;
-  height: 100%;
 }
 
 .user-info .user-name {
@@ -229,10 +226,10 @@ html {
 #main {
   grid-area: main;
   background: #e2e8f0;
-  padding: 25px 20px 100px 15px;
+  padding: 25px 20px 0 15px;
 
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 3fr 1fr;
 
   column-gap: 20px;
 }
@@ -244,19 +241,19 @@ main h2 {
 
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  height: 100%;
 }
 
 .project-cards .card {
   background: white;
-  padding: 30px 20px;
+  padding: 30px 20px 20px;
   border-radius: 6px;
   border-left: 7px solid #f0b429;
 
   display: grid;
   box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.1);
+  gap: 30px;
 }
 
 .project-cards .buttons {
@@ -288,7 +285,7 @@ main h2 {
 .main-right {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  gap: 15px;
 }
 
 .announcements-card {
@@ -319,10 +316,11 @@ main h2 {
 .trending-card {
   background: white;
   border-radius: 6px;
-  height: 100%;
   padding: 25px;
 
   display: grid;
+
+  gap: 20px;
 }
 
 .trending-person {
