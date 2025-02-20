@@ -25,7 +25,6 @@ html {
   grid-template-columns: 250px 1fr;
   grid-template-rows: 180px 1fr;
 
-  border: 1px solid;
   height: 100vh;
 }
 
@@ -199,14 +198,6 @@ html {
   grid-template-columns: 2fr 1fr;
 }
 
-/* .header-bottom > * {
-  border: 1px solid;
-} */
-
-/* .header-bottom .user-info > * {
-  border: 1px solid;
-} */
-
 .header-bottom .user-info {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -232,6 +223,7 @@ html {
   border-radius: 20px;
   width: 100px;
   height: 40px;
+  cursor: pointer;
 }
 
 #main {
@@ -240,7 +232,7 @@ html {
   padding: 25px 20px 100px 15px;
 
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
 
   column-gap: 20px;
 }
@@ -252,8 +244,7 @@ main h2 {
 
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   height: 100%;
 }
@@ -296,4 +287,59 @@ main h2 {
 
 .main-right {
   display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.announcements-card {
+  padding: 30px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.announcements-card hr {
+  margin: 20px 0;
+  opacity: 0.5;
+}
+
+.announcement {
+  padding: 0 5px;
+}
+
+.announcement h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.announcement p {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.trending-card {
+  background: white;
+  border-radius: 6px;
+  height: 100%;
+  padding: 25px;
+
+  display: grid;
+}
+
+.trending-person {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 15px;
+}
+
+.trending-person img {
+  width: 40px;
+}
+
+.trending-person-tag {
+  font-size: 14px;
+}
+
+.trending-person-name {
+  font-size: 0.9rem;
+  color: #666;
 }
