@@ -36,12 +36,25 @@ html {
   background: #1992d4;
 
   display: grid;
-  grid-template-rows: 1fr 4fr 5fr;
+  grid-template-rows: 50px 300px;
+  row-gap: 30px;
   color: white;
 }
 
-#sidebar > * {
+/* #sidebar > * {
   border: 1px solid red;
+} */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+}
+
+.brand img {
+  width: 40px;
+  height: 100%;
 }
 
 .brand span {
@@ -49,20 +62,23 @@ html {
   font-weight: 500;
 }
 
-#sidebar .navigation {
+#sidebar .navigation,
+#sidebar .branding {
   display: grid;
   grid-template-rows: repeat(auto-fit, 50px);
   align-items: center;
 
   padding: 0 20px;
-  border: 1px solid red;
 }
 
-.navigation a {
+.navigation a,
+.branding a {
   display: flex;
+  align-items: center;
 
   column-gap: 15px;
   padding: 10px 0;
+  font-weight: 500;
 }
 
 .navigation a,
@@ -71,34 +87,47 @@ html {
   color: white;
 }
 
-.navigation a::before {
+.navigation a::before,
+.branding a::before {
   content: '';
   background-repeat: no-repeat;
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
 }
 
 .navigation .home::before {
-  background: url(images/home.svg);
+  background: url(./images/home.svg);
 }
 
 .navigation .profile::before {
-  background: url(images/profile-card.svg);
+  background: url(./images/profile-card.svg);
 }
 
 .navigation .messages::before {
-  background: url(images/messages.svg);
+  background: url(./images/messages.svg);
 }
 
 .navigation .history::before {
-  background: url(images/history.svg);
+  background: url(./images/history.svg);
 }
 
 .navigation .tasks::before {
-  background: url(images/tasks.svg);
+  background: url(./images/tasks.svg);
 }
 .navigation .communities::before {
-  background: url(images/communities.svg);
+  background: url(./images/communities.svg);
+}
+
+.branding .settings::before {
+  background: url(./images/settings.svg);
+}
+
+.branding .support:before {
+  background: url(./images/support.svg);
+}
+
+.branding .privacy:before {
+  background: url(./images/privacy.svg);
 }
 
 /* #sidebar > * {
